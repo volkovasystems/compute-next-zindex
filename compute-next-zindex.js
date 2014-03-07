@@ -15,7 +15,7 @@ try{ var base = window; }catch( error ){ var base = exports; }
 				var zIndexList = { };
 				for( var index = 0; index < nodeList.length; index++ ){
 					var node = $( nodeList[ index ] );
-					zIndexList[ parseInt( node.css( "z-index" ) ) ) ] = node;
+					zIndexList[ node.css( "z-index" ) ) ] = node;
 				}
 				
 				return ( parseInt( _.sortBy( Object.keys( zIndexList ) ).pop( ) ) + 1 );
